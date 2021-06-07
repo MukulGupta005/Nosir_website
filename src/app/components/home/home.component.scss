@@ -1,0 +1,27 @@
+@import 'src/assets/styles/helpers/mixins';
+
+.home-component {
+  background-color: #952e16;
+  color: white;
+  @include flex-container(center, center, row);
+  flex-wrap: wrap;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 1rem;
+
+  .tagline {
+    font-size: 4rem;
+    flex: 1;
+    @include flex-container(center, center);
+    font-weight: bold;
+    text-align: center
+  }
+
+  .image {
+    @include flex-container(center, center);
+    flex: 1;
+    img{
+   width: 100%;
+    }
+  }
+}

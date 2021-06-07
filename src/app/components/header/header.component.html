@@ -1,0 +1,9 @@
+<div class="header-component" [class.white]="isBackgroundWhite">
+    <div class="logo">
+        <img src="assets/images/nosir.png">
+    </div>
+
+    <div class="navigation">
+        <div class="nav"  *ngFor="let nav of navs">{{nav.name}}</div>
+    </div>
+</div>

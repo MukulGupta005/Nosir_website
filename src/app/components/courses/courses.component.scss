@@ -1,0 +1,12 @@
+@import "src/assets/styles/helpers/mixins";
+
+.courses-component{
+    width: 100%;
+    @include flex-container(center, center, row);
+    flex-wrap: wrap;
+
+    .card{
+        margin: 0 1rem;
+    }
+
+}

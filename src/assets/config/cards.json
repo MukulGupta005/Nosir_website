@@ -1,0 +1,32 @@
+{
+    "courses" : [
+        {
+            "id" : 1,
+            "img" : "assets/images/course1.jpeg",
+            "courseName" : "Maths for class 10th",
+            "instructor" : "Nisha Poswal",
+            "prize" : 499
+          },
+          {
+            "id" : 1,
+            "img" : "assets/images/kid2.png",
+            "courseName" : "Maths for class 10th",
+            "instructor" : "Nisha Poswal",
+            "prize" : 499
+          },
+          {
+            "id" : 1,
+            "img" : "assets/images/kid.jpg",
+            "courseName" : "Maths for class 10th",
+            "instructor" : "Nisha Poswal",
+            "prize" : 499
+          },
+          {
+            "id" : 1,
+            "img" : "assets/images/kid4.jpg",
+            "courseName" : "Maths for class 10th",
+            "instructor" : "Nisha Poswal",
+            "prize" : 499
+          }
+    ]
+}

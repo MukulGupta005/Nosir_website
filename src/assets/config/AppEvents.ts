@@ -1,0 +1,3 @@
+export const APP_EVENTS = {
+    SHOW_DEMO_POPUP: "SHOW_DEMO_POPUP"
+}

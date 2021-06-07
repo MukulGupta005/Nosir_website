@@ -1,0 +1,52 @@
+@import "src/assets/styles/helpers/mixins";
+
+.card-component {
+  width: 250px;
+  @include flex-container(center, center, column);
+  padding: 2rem 3px;
+  border-bottom: 1px solid rgb(186, 185, 185);
+  border-radius: 5px;
+
+  .image {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  .course-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.1rem 0rem;
+    text-align: center;
+  }
+
+  .instructor {
+    font-size: 0.8rem;
+  }
+
+  .book-demo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: #952e16;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0rem;
+  }
+
+  .book-demo:hover {
+    transform: scale(1.2);
+  }
+
+  .prize {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}

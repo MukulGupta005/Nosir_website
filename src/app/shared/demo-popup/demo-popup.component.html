@@ -1,0 +1,19 @@
+<div class="demo-popup-component">
+  <div class="pop-up">
+    <div class="course-name">
+      {{ selectedcourse.courseName }}
+    </div>
+    <form [formGroup]="bookDemoForm">
+      <label>Phone Number:</label>
+      <input
+        type="number"
+        placeholder="Enter your phone number"
+        formControlName="phoneNumber"
+      />
+      <div class="err" *ngIf="bookDemoForm.controls.phoneNumber.errors?.required && submitClicked">
+        Please Enter phone number for varification
+      </div>
+      <div class="submit" (click)="submit()">Submit</div>
+    </form>
+  </div>
+</div>
