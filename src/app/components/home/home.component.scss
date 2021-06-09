@@ -1,7 +1,7 @@
 @import 'src/assets/styles/helpers/mixins';
 
 .home-component {
-  background-color: #952e16;
+  @include theme-color();
   color: white;
   @include flex-container(center, center, row);
   flex-wrap: wrap;

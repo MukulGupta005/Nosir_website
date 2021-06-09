@@ -14,42 +14,48 @@ export class CoursesComponent implements OnInit {
         "img" : "assets/images/course1.jpeg",
         "courseName" : "English for class 10th",
         "instructor" : "Nisha Poswal",
-        "prize" : 499
+        "prize" : 499,
+         "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
         "img" : "assets/images/course1.jpeg",
         "courseName" : "Learn guitar",
         "instructor" : "Nisha Poswal",
-        "prize" : 499
+        "prize" : 499,
+        "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
         "img" : "assets/images/course1.jpeg",
         "courseName" : "Python",
         "instructor" : "Nisha Poswal",
-        "prize" : 499
+        "prize" : 499,
+        "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
         "img" : "assets/images/course1.jpeg",
         "courseName" : "Data structure and algorithms",
         "instructor" : "Nisha Poswal",
-        "prize" : 499
+        "prize" : 499,
+        "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
         "img" : "assets/images/course1.jpeg",
         "courseName" : "Maths for class 10th",
         "instructor" : "Nisha Poswal",
-        "prize" : 499
+        "prize" : 499,
+        "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
         "img" : "assets/images/course1.jpeg",
         "courseName" : "History for class 10th",
         "instructor" : "Nisha Poswal",
-        "prize" : 499
+        "prize" : 499,
+        "profile" : "assets/images/kid.jpg"
       }
 ];
 

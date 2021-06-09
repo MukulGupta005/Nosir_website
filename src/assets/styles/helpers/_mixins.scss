@@ -53,3 +53,7 @@
 @mixin max-height($height) {
   max-height: $height / $primary-font-size-value + rem;
 }
+
+@mixin theme-color() {
+  background-color: $background-color1;
+}

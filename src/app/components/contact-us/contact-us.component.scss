@@ -1,0 +1,96 @@
+@import "src/assets/styles/helpers/mixins";
+@import 'src/assets/styles/helpers/variables';
+.contact-us-component{
+    width: 100%;
+    min-height: 100vh;
+    @include flex-container(center, center, column);
+    padding: 1rem;
+    // @include theme-color();
+    background-color: white;
+    padding: 5%;
+    
+
+    .header{
+    @include flex-container(center, center, column);
+    color: #000000;
+    margin-bottom: 4rem;
+
+    .top-header{
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    .text{
+        font-size: 1rem;
+        text-align: center;
+    }
+    }
+
+    .content{
+        width: 100%;
+        @include flex-container(center, center, row);
+        flex-wrap: wrap;
+
+        .contact-modes{
+            flex: 1;
+            color: whitesmoke;
+            @include flex-container(center, center);
+
+            .modes{
+                @include flex-container(flex-start, center, column);
+                .mode{
+                    @include flex-container(center, center, row);
+                    margin-bottom: 2rem;
+    
+                    .left{
+                        margin-right: 10px;
+                        color: whitesmoke;
+                        border-radius: 50%;
+                        background-color: $background-color1;
+                        @include flex-container(center, center, row);
+                       width: 2rem;
+                       height: 2rem;
+                       font-weight: bolder;
+                       font-size: 1rem;
+                    }
+    
+                    .right{
+                       color: black;
+                        .top{
+                            font-size: 0.9rem;
+                            font-weight: bold;
+                        }
+    
+                        .bottom{
+                            font-size: 0.8rem;
+                        }
+    
+                    }
+            }
+            }
+          
+        }
+
+        .msg-card{
+         flex: 1;
+         @include flex-container(center,center);
+         
+               .card{
+                box-shadow: 0px 3px 32px 0px rgba(0,0,0,0.55);
+                padding: 2rem 3rem;
+                border-radius: 10px;
+                .send-msg{
+                    font-weight: bolder;
+                    margin-bottom: 1rem;
+                    font-size: 1.5rem
+                }
+                form{
+                    @include flex-container(center,center, column);
+                    input{
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

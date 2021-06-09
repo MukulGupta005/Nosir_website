@@ -1,3 +1,4 @@
+@import 'src/assets/styles/helpers/mixins';
 /* You can add global styles to this file, and also import other style files */
 * {
   padding: 0;
@@ -13,4 +14,26 @@
 .err{
   color: red;
   font-size: 0.6rem;
+}
+
+.button{
+  font-size: 1.2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    @include theme-color();
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #952e16;
+  outline: none;
+  padding: 5px 0;
 }

@@ -1,0 +1,38 @@
+<div class="contact-us-component">
+  <div class="header">
+    <div class="top-header">Contact-us</div>
+    <div class="text">
+      The U.S. National Academies of Sciences, Engineering, and Medicine
+      determined that an adequate daily fluid intake is: About 15.5 cups (3.7
+      liters) of fluids a day for men. About 11.5 cups (2.7 liters) of fluids a
+      day for women.
+    </div>
+  </div>
+  <div class="content">
+    <div class="msg-card">
+      <div class="card">
+        <div class="send-msg">Send Message</div>
+        <form action="">
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email" />
+          <input type="text" placeholder="Type message here" />
+        </form>
+
+        <div class="button">Submit</div>
+      </div>
+    </div>
+    <div class="contact-modes">
+      <div class="modes">
+        <div class="mode" *ngFor="let mode of modes">
+          <div class="left">
+            <i class="{{ mode.class }}"></i>
+          </div>
+          <div class="right">
+            <div class="top">{{ mode.topText }}</div>
+            <div class="bottom">{{ mode.bottomText }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

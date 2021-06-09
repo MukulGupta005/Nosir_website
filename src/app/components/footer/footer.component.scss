@@ -1,0 +1,30 @@
+@import "src/assets/styles/helpers/mixins";
+@import 'src/assets/styles/helpers/variables';
+.footer-component{
+    width: 100%;
+    height: 100px;
+    background-color: #032214;
+    color: whitesmoke;
+    @include flex-container(center, center, column);
+
+    .icons{
+        @include flex-container(center,center);
+        a{
+            color: $background-color1;
+           width: 3rem;
+           height: 3rem;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            margin: 0.5rem;
+            text-decoration: none;
+            @include flex-container(center,center);
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+    }
+
+    .copy-right{
+        @include flex-container(center, center);
+        font-size: 0.7rem;
+    }
+}

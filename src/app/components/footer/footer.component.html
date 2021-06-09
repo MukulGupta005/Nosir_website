@@ -1,1 +1,8 @@
-<p>footer works!</p>
+<div class="footer-component">
+  <div class="icons">
+    <a *ngFor="let icon of socialMedia" href="{{icon.link}}" class="{{icon.class}}" target="_blank"></a>
+  </div>
+  <div class="copy-right">
+    <span>&copy;</span> 2021 nosir.in
+  </div>
+</div>

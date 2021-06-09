@@ -1,9 +1,13 @@
 <div class="card-component">
   <div class="image">
     <img src="{{ cardData.img }}" alt="" />
+    <div class="profile">
+      <img src="{{cardData.profile}}" alt="">
+    </div>
   </div>
   <div class="course-name">
     {{ cardData.courseName }}
+    <!-- <span class="tooltiptext"> {{ cardData.courseName }}</span> -->
   </div>
   <div class="instructor">
     {{ cardData.instructor }}
