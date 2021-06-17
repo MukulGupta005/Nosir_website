@@ -1,0 +1,15 @@
+{
+  "targets": {
+    "nosir-8ae69": {
+      "hosting": {
+        "nosir-client": [
+          "nosir-8ae69"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nosir-8ae69",
+    "nosir": "nosir-8ae69"
+  }
+}
