@@ -18,6 +18,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { ToasterComponent } from './components/toaster/toaster.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     DemoPopupComponent,
     CourseOnDemandComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ToasterComponent
   ],
   imports: [
     BrowserModule,

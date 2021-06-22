@@ -4,10 +4,11 @@
     width: 100%;
     min-height: 100vh;
     @include flex-container(center, center, column);
-    padding: 1rem;
+    // padding: 1rem;
     // @include theme-color();
     background-color: white;
     padding: 5%;
+    padding-top: 100px;
     
 
     .header{
@@ -85,7 +86,7 @@
                 }
                 form{
                     @include flex-container(center,center, column);
-                    input{
+                    .input-container{
                         margin-bottom: 1.5rem;
                     }
                 }

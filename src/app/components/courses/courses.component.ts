@@ -107,10 +107,10 @@ export class CoursesComponent implements OnInit {
   // cards = this.getCourses(); --> take values 
 
   ngOnInit(): void {
-    this.createCourses(); //just for testing
-    this.getCourses();
-    this.updateCourse(this.updateDoc);
-    this.deleteCourse(this.deleteDoc);
+    // this.createCourses(); //just for testing
+    // this.getCourses();
+    // this.updateCourse(this.updateDoc);
+    // this.deleteCourse(this.deleteDoc);
   }
 
   // getcourses() {

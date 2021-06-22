@@ -12,13 +12,28 @@
     <div class="msg-card">
       <div class="card">
         <div class="send-msg">Send Message</div>
-        <form action="">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="Type message here" />
+        <form action="" [formGroup]="contactUsForm">
+          <div class="input-container">
+            <input type="text" placeholder="Full Name" formControlName="name" />
+          <div class="err" *ngIf="contactUsForm.controls.name.errors?.required && submitClicked">
+            Please Enter your Name
+          </div>
+          </div>
+          <div class="input-container">
+            <input type="email" placeholder="Email"  formControlName="email"/>
+          <div class="err" *ngIf="contactUsForm.controls.email.errors?.required && submitClicked">
+            Please Enter your email
+          </div>
+          </div>
+          <div class="input-container">
+            <input type="text" placeholder="Type message here" formControlName="msg"/>
+          <div class="err" *ngIf="contactUsForm.controls.msg.errors?.required && submitClicked">
+            Please Enter message
+          </div>
+          </div>
         </form>
 
-        <div class="button">Submit</div>
+        <div class="button" (click)="submit()">Submit</div>
       </div>
     </div>
     <div class="contact-modes">

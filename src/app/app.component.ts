@@ -10,6 +10,8 @@ import { EventData, EventEmitterService } from './services/event-emitter.service
 export class AppComponent implements OnDestroy, OnInit{
   subscription: any;
   displayDemoPopUp : boolean = false;
+  showtoaster = false
+  toasterMsg = ""
   constructor(private eventEmitterService: EventEmitterService) { }
 
   ngOnInit(): void {
@@ -22,6 +24,14 @@ export class AppComponent implements OnDestroy, OnInit{
   switch(event.type){
     case APP_EVENTS.SHOW_DEMO_POPUP :
       this.displayDemoPopUp = event.data.display;
+      break
+    case APP_EVENTS.SHOW_TOASTER :
+      this.showtoaster = true
+      this.toasterMsg = event.data.msg
+      setTimeout(()=>{
+      this.showtoaster = false
+      }, 3000)
+      break
   }
   }
 

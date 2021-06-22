@@ -48,7 +48,13 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
         data: {
           display: false,
         },
-      });
+      })
+      this.eventEmitterService.emit({
+        type : APP_EVENTS.SHOW_TOASTER,
+        data : {
+          msg : "Demo booked successfully"
+        }
+      })
     }
   }
 

@@ -5,11 +5,18 @@
         we will arrange teachers for you.
     </div>
     <div class="right">
-        <div class="card">
+        <div class="card" [formGroup]="courseDetailForm">
+            <div class="input-container">
+                <label for="">Enter Phone Number</label>
+                <input type="number" formControlName="phone">
+                <div class="err" *ngIf="courseDetailForm.controls.phone.errors?.required && submitIsClicked"> Please enter phone number</div>
+            </div>
             <label for="">Enter On demand course details</label>
             <!-- <input type="text" placeholder="Enter course details"> -->
-            <textarea name="" id="" cols="30" rows="10" placeholder="Enter here"></textarea>
-            <div class="button">Submit</div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Enter here" formControlName="details"></textarea>
+            <div class="err" *ngIf="courseDetailForm.controls.details.errors?.required && submitIsClicked">Please Enter COurse Details</div>
+
+            <div class="button" (click)="submit()">Submit</div>
         </div>
     </div>
 </div>

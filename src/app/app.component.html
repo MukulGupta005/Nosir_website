@@ -1,10 +1,12 @@
 <div class="header">
 <app-header></app-header>
 </div>
-<app-home></app-home>
-<app-courses></app-courses>
+<app-home id="0"></app-home>
+<app-courses id="1" ></app-courses>
 
 <app-demo-popup *ngIf="displayDemoPopUp"></app-demo-popup>
-<app-course-on-demand></app-course-on-demand>
-<app-contact-us></app-contact-us>
+<app-course-on-demand id="3"></app-course-on-demand>
+<app-contact-us id="2"></app-contact-us>
 <app-footer></app-footer>
+
+<app-toaster [msg]="toasterMsg" *ngIf="showtoaster"></app-toaster>

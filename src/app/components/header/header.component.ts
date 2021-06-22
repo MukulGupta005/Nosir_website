@@ -19,8 +19,8 @@ export class HeaderComponent implements OnInit {
       name : "Courses",
     },
     {
-      id : 2,
-      name : "About Us",
+      id : 3,
+      name : "Course on Demand",
     },
     {
       id : 2,

@@ -5,6 +5,7 @@
     @include flex-container(center, center, row);
     flex-wrap: wrap;
     margin-bottom: 2rem;
+    padding-top: 100px;
 
     .card{
         margin: 0 1rem;
