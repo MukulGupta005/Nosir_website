@@ -11,50 +11,50 @@ export class CoursesComponent implements OnInit {
   cards =  [
     {
         "id" : 1,
-        "img" : "assets/images/course1.jpeg",
+        "img" : "assets/images/english.jpeg",
         "courseName" : "English for class 10th",
-        "instructor" : "Nisha Poswal",
-        "prize" : 499,
+        "instructor" : "Koushal Dubey",
+        "prize" : 699,
          "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
-        "img" : "assets/images/course1.jpeg",
+        "img" : "assets/images/guitar.jpeg",
         "courseName" : "Learn guitar",
-        "instructor" : "Nisha Poswal",
-        "prize" : 499,
+        "instructor" : "Krishan Kumar",
+        "prize" : 799,
         "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
-        "img" : "assets/images/course1.jpeg",
+        "img" : "assets/images/python.png",
         "courseName" : "Python",
-        "instructor" : "Nisha Poswal",
+        "instructor" : "Sagar Mehta",
         "prize" : 499,
         "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
-        "img" : "assets/images/course1.jpeg",
+        "img" : "assets/images/algods.png",
         "courseName" : "Data structure and algorithms",
-        "instructor" : "Nisha Poswal",
-        "prize" : 499,
+        "instructor" : "Aadarsh Gupta",
+        "prize" : 599,
         "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
-        "img" : "assets/images/course1.jpeg",
+        "img" : "assets/images/maths.jpeg",
         "courseName" : "Maths for class 10th",
-        "instructor" : "Nisha Poswal",
+        "instructor" : "Mukut Sharma",
         "prize" : 499,
         "profile" : "assets/images/kid.jpg"
       },
       {
         "id" : 1,
-        "img" : "assets/images/course1.jpeg",
+        "img" : "assets/images/history.jpeg",
         "courseName" : "History for class 10th",
-        "instructor" : "Nisha Poswal",
-        "prize" : 499,
+        "instructor" : "Tappasum",
+        "prize" : 399,
         "profile" : "assets/images/kid.jpg"
       }
 ];
