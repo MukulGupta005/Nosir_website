@@ -37,25 +37,36 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
   initializeDemoForm() {
     this.bookDemoForm = this.formBuilder.group({
       phoneNumber: ["", Validators.required],
+      date: ["", Validators.required],
     });
   }
 
   submit() {
     this.submitClicked = true;
     if (this.bookDemoForm.valid) {
-      this.eventEmitterService.emit({
-        type: APP_EVENTS.SHOW_DEMO_POPUP,
-        data: {
-          display: false,
-        },
-      })
-      this.eventEmitterService.emit({
-        type : APP_EVENTS.SHOW_TOASTER,
-        data : {
-          msg : "Demo booked successfully"
-        }
-      })
+     this.toaster("Demo booked successfully")
+     console.log(this.bookDemoForm.value)
+     this.close()
     }
+  }
+
+  close(){
+    this.eventEmitterService.emit({
+      type : APP_EVENTS.SHOW_DEMO_POPUP, 
+       data : {
+         display : false
+       }
+    });
+  }
+
+  toaster(msg : String){
+    this.eventEmitterService.emit({
+      type : APP_EVENTS.SHOW_TOASTER,
+       data : {
+         msg 
+       }
+      
+    });
   }
 
   ngOnDestroy() {
