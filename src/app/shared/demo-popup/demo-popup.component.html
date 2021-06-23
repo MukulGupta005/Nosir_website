@@ -1,9 +1,12 @@
 <div class="demo-popup-component">
+ 
   <div class="pop-up">
+    <div class="cross" (click)="close()">X</div>
     <div class="course-name">
       {{ selectedcourse.courseName }}
     </div>
     <form [formGroup]="bookDemoForm">
+     <div class="input-container">
       <label>Phone Number:</label>
       <input
         type="number"
@@ -12,6 +15,15 @@
       />
       <div class="err" *ngIf="bookDemoForm.controls.phoneNumber.errors?.required && submitClicked">
         Please Enter phone number for varification
+      </div>
+     </div>
+
+      <div class="input-container">
+        <label for="">Date And Time</label>
+        <input type="datetime-local" formControlName="date"/>
+        <div class="err" *ngIf="bookDemoForm.controls.date.errors?.required && submitClicked">
+          Please select date and time for demo
+        </div>
       </div>
       <div class="submit" (click)="submit()">Submit</div>
     </form>

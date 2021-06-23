@@ -14,4 +14,5 @@ export class CommonService {
   getSelectedCourse(){
     return this.selectedCourse;
   }
+  
 }

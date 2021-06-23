@@ -11,17 +11,19 @@ import { APP_EVENTS } from "src/assets/config/AppEvents";
 export class CardComponent implements OnInit {
   @Input() cardData: any;
 
-  constructor(private eventEmitterService: EventEmitterService,
-    private commonService: CommonService) {}
+  constructor(
+    private eventEmitterService: EventEmitterService,
+    private commonService: CommonService
+  ) {}
   ngOnInit(): void {}
 
   bookDemo(course: any) {
     this.commonService.setSelectedCourse(course);
     this.eventEmitterService.emit({
-      type: APP_EVENTS.SHOW_DEMO_POPUP,
-      data: {
-        display: true,
-      },
+      type : APP_EVENTS.SHOW_DEMO_POPUP, 
+       data : {
+         display : true
+       }
     });
   }
 }

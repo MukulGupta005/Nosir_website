@@ -48,15 +48,19 @@ initializeForm(){
   this.submitClicked = true
 
   if(this.contactUsForm.valid){
-  this.eventEmitterService.emit({
-    type : APP_EVENTS.SHOW_TOASTER ,
-    data : {
-      msg : 'Message sent successfully'
-    }
-  })
+  this.toaster('Message sent successfully')
+  }
   this.submitClicked = false
   this.contactUsForm.reset()
   }
+  toaster(msg : String){
+    this.eventEmitterService.emit({
+      type : APP_EVENTS.SHOW_TOASTER,
+       data : {
+         msg 
+       }
+      
+    });
   }
 
 }
