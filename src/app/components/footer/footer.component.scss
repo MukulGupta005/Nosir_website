@@ -3,6 +3,7 @@
 .footer-component{
     width: 100%;
     height: 100px;
+    margin: auto;
     background-color: #032214;
     color: whitesmoke;
     @include flex-container(center, center, column);

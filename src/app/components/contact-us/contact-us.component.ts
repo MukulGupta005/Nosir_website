@@ -16,12 +16,12 @@ modes = [
   {
     class : "fa fa-phone",
     topText : "Phone",
-    bottomText : "8126139270",
+    bottomText : "+919672421830",
   },
   {
     class : "fa fa-envelope",
     topText : "Email",
-    bottomText : "nishaposwal321@gmail.com",
+    bottomText : "vishal@nosir.in",
   },
   // {
   //   class : "fa fa-phone",

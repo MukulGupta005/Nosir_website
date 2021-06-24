@@ -12,54 +12,78 @@ export class CoursesComponent implements OnInit {
     {
         "id" : 1,
         "img" : "assets/images/english.jpeg",
-        "courseName" : "English for class 10th",
-        "instructor" : "Koushal Dubey",
-        "prize" : 699,
-         "profile" : "assets/images/kid.jpg"
+        "courseName" : "I will teach you english",
+        "instructor" : "Saucha Hemmings",
+        "prize" : 899,
+         "profile" : "assets/images/dVwwrn9MJsrHbdv5D5Zr.png"
       },
       {
         "id" : 1,
-        "img" : "assets/images/guitar.jpeg",
-        "courseName" : "Learn guitar",
-        "instructor" : "Krishan Kumar",
-        "prize" : 799,
-        "profile" : "assets/images/kid.jpg"
+        "img" : "assets/images/piano.jpg",
+        "courseName" : "Piano from Trinity Teacher",
+        "instructor" : "Devashish Sharma",
+        "prize" : 1199,
+        "profile" : "assets/images/ai6UqMVgHfOUQ84hIgBC.png"
       },
       {
         "id" : 1,
-        "img" : "assets/images/python.png",
-        "courseName" : "Python",
-        "instructor" : "Sagar Mehta",
-        "prize" : 499,
-        "profile" : "assets/images/kid.jpg"
+        "img" : "assets/images/webd.png",
+        "courseName" : "Web Development",
+        "instructor" : "Ricardol. Arbois Jr",
+        "prize" : 1399,
+        "profile" : "assets/images/BQcjLcItkeNMIppyYnNa.png"
       },
       {
         "id" : 1,
-        "img" : "assets/images/algods.png",
-        "courseName" : "Data structure and algorithms",
-        "instructor" : "Aadarsh Gupta",
+        "img" : "assets/images/c++.jpeg",
+        "courseName" : "I will teach you C++",
+        "instructor" : "Alkesh Kaba",
         "prize" : 599,
-        "profile" : "assets/images/kid.jpg"
+        "profile" : "assets/images/qaJvsFFsEUx6mpcPiqrO.png"
       },
       {
         "id" : 1,
-        "img" : "assets/images/maths.jpeg",
-        "courseName" : "Maths for class 10th",
-        "instructor" : "Mukut Sharma",
-        "prize" : 499,
-        "profile" : "assets/images/kid.jpg"
+        "img" : "assets/images/python.jpeg",
+        "courseName" : "Python from IT expert",
+        "instructor" : "Krishnarao S V V",
+        "prize" : 999,
+        "profile" : "assets/images/ylI6ENs4BGaccDFZqCMw.png"
       },
       {
         "id" : 1,
-        "img" : "assets/images/history.jpeg",
-        "courseName" : "History for class 10th",
-        "instructor" : "Tappasum",
-        "prize" : 399,
-        "profile" : "assets/images/kid.jpg"
+        "img" : "assets/images/japanese.jpeg",
+        "courseName" : "I will teach you Japanese",
+        "instructor" : "Princess V. Haak",
+        "prize" : 699,
+        "profile" : "assets/images/ubrCjzZFdsf7yvPvB8jE.png"
+      },
+      {
+        "id" : 1,
+        "img" : "assets/images/biology.png",
+        "courseName" : "Biology for Class 10th",
+        "instructor" : "kiran lalani",
+        "prize" : 1899,
+        "profile" : "assets/images/IJDYrNTKUVQIiFm8S3LZ.png"
+      },
+      {
+        "id" : 1,
+        "img" : "assets/images/urdu.jpeg",
+        "courseName" : "I will teach you Urdu",
+        "instructor" : "Iniaz Ai",
+        "prize" : 699,
+        "profile" : "assets/images/QRfDIZ3Wy6XqEfEiNq7W.png"
+      },
+      {
+        "id" : 1,
+        "img" : "assets/images/autocad.png",
+        "courseName" : "I will teach you AutoCad",
+        "instructor" : "Neha Anil",
+        "prize" : 699,
+        "profile" : "assets/images/YYtI5wBDwAZEA1idrjFO.png"
       }
 ];
 
-  createCourses() {
+createCourses() {
     this.coursesService.createCourse({
       "id" : 1,
       "img" : "assets/images/course1.jpeg",

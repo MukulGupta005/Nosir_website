@@ -1,6 +1,7 @@
 @import "src/assets/styles/helpers/mixins";
 
 .courses-component{
+    margin: auto;
     width: 100%;
     @include flex-container(center, center, row);
     flex-wrap: wrap;
