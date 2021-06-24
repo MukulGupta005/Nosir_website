@@ -3,7 +3,9 @@
 .contact-us-component{
     width: 100%;
     min-height: 100vh;
+    display: flex;
     @include flex-container(center, center, column);
+    flex-wrap: wrap;
     // padding: 1rem;
     // @include theme-color();
     background-color: white;
@@ -28,13 +30,17 @@
 
     .content{
         width: 100%;
+        display: flex;
         @include flex-container(center, center, row);
         flex-wrap: wrap;
 
         .contact-modes{
             flex: 1;
             color: whitesmoke;
+            display: flex;
+            margin-top: 20px;
             @include flex-container(center, center);
+            flex-wrap: wrap;
 
             .modes{
                 @include flex-container(flex-start, center, column);

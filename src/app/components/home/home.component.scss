@@ -3,6 +3,7 @@
 .home-component {
   @include theme-color();
   color: white;
+  margin: auto;
   @include flex-container(center, center, row);
   flex-wrap: wrap;
   min-height: 100vh;
