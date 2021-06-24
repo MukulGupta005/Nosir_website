@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Event } from "@angular/router";
+import { AuthService } from "src/app/services/auth.service";
 import { CommonService } from "src/app/services/common.service";
 import {
   EventData,
@@ -18,10 +19,12 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
   selectedcourse: any;
   bookDemoForm: any;
   submitClicked: boolean = false;
+  isLoggedIn = false;
   constructor(
     private commonService: CommonService,
     private eventEmitterService: EventEmitterService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -30,6 +33,14 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
     this.subscription = this.eventEmitterService.subscribe((event: EventData) =>
       this.handleAppEvents(event)
     );
+
+    if (this.authService.getCurrentUser()) {
+      this.isLoggedIn = true;
+    }
+    this.authService.isLoggedIn.subscribe((data) => {
+      this.isLoggedIn = data;
+      console.log("logged in", data);
+    });
   }
 
   handleAppEvents(event: EventData) {}
@@ -44,28 +55,33 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
   submit() {
     this.submitClicked = true;
     if (this.bookDemoForm.valid) {
-     this.toaster("Demo booked successfully")
-     console.log(this.bookDemoForm.value)
-     this.close()
+      this.toaster("Demo booked successfully");
+      let payload = {
+        ...this.bookDemoForm.value,
+        name: this.authService.getCurrentUser().displayName,
+        email: this.authService.getCurrentUser().email,
+        courseDetails: this.selectedcourse,
+      };
+      console.log(payload);
+      this.close();
     }
   }
 
-  close(){
+  close() {
     this.eventEmitterService.emit({
-      type : APP_EVENTS.SHOW_DEMO_POPUP, 
-       data : {
-         display : false
-       }
+      type: APP_EVENTS.SHOW_DEMO_POPUP,
+      data: {
+        display: false,
+      },
     });
   }
 
-  toaster(msg : String){
+  toaster(msg: String) {
     this.eventEmitterService.emit({
-      type : APP_EVENTS.SHOW_TOASTER,
-       data : {
-         msg 
-       }
-      
+      type: APP_EVENTS.SHOW_TOASTER,
+      data: {
+        msg,
+      },
     });
   }
 

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { APP_EVENTS } from 'src/assets/config/AppEvents';
+import { AuthService } from './services/auth.service';
 import { EventData, EventEmitterService } from './services/event-emitter.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,12 +12,14 @@ export class AppComponent implements OnDestroy, OnInit{
   displayDemoPopUp : boolean = false;
   showtoaster = false
   toasterMsg = ""
-  constructor(private eventEmitterService: EventEmitterService) { }
+  constructor(private eventEmitterService: EventEmitterService,
+    private authService : AuthService, ) { }
 
   ngOnInit(): void {
     this.subscription = this.eventEmitterService.subscribe((event: EventData)=>{
       this.handleAppEvents(event);
     });
+    this.authService.fetchCurrentSignedInUser()
   }
 
   handleAppEvents(event: EventData){
