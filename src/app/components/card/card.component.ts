@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { AuthService } from "src/app/services/auth.service";
 import { CommonService } from "src/app/services/common.service";
 import { EventEmitterService } from "src/app/services/event-emitter.service";
@@ -11,11 +12,13 @@ import { APP_EVENTS } from "src/assets/config/AppEvents";
 })
 export class CardComponent implements OnInit {
   @Input() cardData: any;
+  coursedetails: any;
 
   constructor(
     private eventEmitterService: EventEmitterService,
     private commonService: CommonService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router:Router
   ) {}
   ngOnInit(): void {}
 
@@ -30,5 +33,15 @@ export class CardComponent implements OnInit {
         display: true,
       },
     });
+    
   }
+  details(message:string){
+    console.log('message')
+    alert('Message')
+    this.router.navigate(['coursedetails']);
+  }
+ 
+}
+function coursedetails(message: any, string: any) {
+  throw new Error("Function not implemented.");
 }

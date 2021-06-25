@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
@@ -19,6 +19,7 @@ import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { ToasterComponent } from './components/toaster/toaster.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { ToasterComponent } from './components/toaster/toaster.component';
     CourseOnDemandComponent,
     AboutUsComponent,
     ContactUsComponent,
-    ToasterComponent
+    ToasterComponent,
+    CourseDetailsComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -48,3 +51,6 @@ import { ToasterComponent } from './components/toaster/toaster.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+function appRoutes(appRoutes: any, arg1: { enableTracing: true; }): any[] | import("@angular/core").Type<any> | import("@angular/core").ModuleWithProviders<{}> {
+  throw new Error('Function not implemented.');
+}
