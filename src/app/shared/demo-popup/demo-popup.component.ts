@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Event } from "@angular/router";
+import { AddDataService } from "src/app/services/add-data.service";
 import { AuthService } from "src/app/services/auth.service";
 import { CommonService } from "src/app/services/common.service";
 import {
@@ -24,7 +25,8 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
     private commonService: CommonService,
     private eventEmitterService: EventEmitterService,
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private addDataService: AddDataService
   ) {}
 
   ngOnInit() {
@@ -60,9 +62,12 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
         ...this.bookDemoForm.value,
         name: this.authService.getCurrentUser().displayName,
         email: this.authService.getCurrentUser().email,
-        courseDetails: this.selectedcourse,
+        courseName: this.selectedcourse.courseName,
+        instructor: this.selectedcourse.instructor,
       };
-      console.log(payload);
+      this.addDataService.addDemo(payload);
+      // console.log(payload);
+
       this.close();
     }
   }
