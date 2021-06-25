@@ -35,10 +35,10 @@ export class CardComponent implements OnInit {
     });
     
   }
-  details(message:string){
+  details(){
     console.log('message')
-    alert('Message')
-    this.router.navigate(['coursedetails']);
+    // alert('Message')
+    this.router.navigate(['/coursedetails']);
   }
  
 }

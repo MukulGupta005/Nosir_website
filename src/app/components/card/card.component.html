@@ -1,5 +1,5 @@
-<div class="card-component">
-  <div class="image" (click)="details('Event')">
+<div class="card-component" (click)="details()">
+  <div class="image" >
     <img src="{{ cardData.img }}" alt="" />
     <div class="profile">
       <img src="{{cardData.profile}}" alt="">
@@ -19,4 +19,4 @@
    Price:   &#8377;{{ cardData.prize }}
   </div>
 </div>
-<router-outlet></router-outlet>
+
