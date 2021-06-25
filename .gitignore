@@ -10,6 +10,7 @@
 
 # firebase
 /docs
+/.firebase
 
 # IDEs and editors
 /.idea

@@ -41,7 +41,7 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
     }
     this.authService.isLoggedIn.subscribe((data) => {
       this.isLoggedIn = data;
-      console.log("logged in", data);
+      // console.log("logged in", data);
     });
   }
 

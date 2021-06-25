@@ -10,6 +10,7 @@
   },
   "projects": {
     "default": "nosir-8ae69",
-    "nosir": "nosir-8ae69"
+    "nosir": "nosir-8ae69",
+    "nosir-prod": "nosir-8ae69"
   }
 }
